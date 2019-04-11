@@ -20,6 +20,7 @@ export default {
   },
   created(){
     this.$http('/api/main_json_gate.do').then((res)=>{
+        console.log(this.pageUI);
         this.pageUI = res.data.data;
     });
   },
