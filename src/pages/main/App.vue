@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="wrap">
       <LotteHeader></LotteHeader>
   </div>
 </template>
 
 <script>
-import LotteHeader from './components/LotteHeader.vue';
+import LotteHeader from '@/components/LotteHeader.vue';
 
 export default {
   name: 'app',
