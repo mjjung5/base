@@ -14,6 +14,7 @@ entries.forEach((file) => {
     }
 
     pages[pageName] = {
+        title: "롯데닷컴 " + pageName,
         entry: file,
         template: pageHtml,
         filename: pageName+ '/' + pageName + '.html', // html 파일 생성

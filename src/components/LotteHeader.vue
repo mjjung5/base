@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import eventBus from '@/EventBus'
+
 export default {
     name: 'app',
     data(){
@@ -47,13 +49,8 @@ export default {
         }
     },
 
-    computed: {
-
-    },
-
     created(){
         this.$http('/api/main_json_gate.do').then((res)=>{
-            console.log(res)
             this.pageUI.gnbList = res.data.data;
         });
     },
@@ -63,15 +60,16 @@ export default {
             var url = jsonUrl.split("http://m.lotte.com/");
             this.$http('/api/' + url[1]).then((res)=>{
                 this.pageUI.contData = res.data;
-                console.log(this.pageUI.contData)
+                eventBus.$emit("contData", this.pageUI.contData);
             });
-        }
+        },
+
     }
   
 }
 </script>
 
-<style scoped>
+<style>
 .main_header >.header_wrap{position:relative;min-height:122px;background-color:#719cff;box-shadow: 0px 2px 3px rgba(156,156,156,.12);z-index:50;}
 .main_header{height:123px;}
 .main_header >.header_wrap{position:relative;min-height:122px;background-color:#719cff;box-shadow: 0px 2px 3px rgba(156,156,156,.12);z-index:50;
