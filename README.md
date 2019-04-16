@@ -14,14 +14,14 @@
 - 작업 진행전 프로젝트 폴더 구조 정의하여 사용하여야 배포용 소스 빌드시 자동화 가능
 
 ### 폴더 구조
-|   public
-|       index.html
+|   public  |
+|       index.html  |
 |
-|   src
-|       components
+|   src |
+|       components  |
 |
-|   css
-|       common.css
+|   css |
+|       common.css  |
 |
 |   pages
 |       main
