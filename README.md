@@ -14,8 +14,21 @@
 - 작업 진행전 프로젝트 폴더 구조 정의하여 사용하여야 배포용 소스 빌드시 자동화 가능
 
 ### 폴더 구조
+    - dist
+        - js
+            - chunk-vendors.js
+
+        - main
+            - main.css
+            - main.html
+            - main.js
+        - sub
+            - sub.css
+            - sub.html
+            - sub.js
+
     - public
-        index.html
+        - index.html
 
     - src
         - components
@@ -27,10 +40,9 @@
         - main
             - App.vue
             - main.js
-
-    - sub
-        - App.vue
-        - main.js
+        - sub
+            - App.vue
+            - main.js
 
     - EventBus.js
 
