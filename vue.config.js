@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require("glob");
+const productionMode = process.env.NODE_ENV === 'production' ? true : false; // 배포용 - production,  개발용 - development
 const pages = {};
 let entries = glob('./src/pages/*/main.js', {sync: true}); // glob 쉘이 사용하는 패턴 *등 사용하여 파일 일치 시키고 Array로 반환
 
@@ -17,6 +18,7 @@ entries.forEach(root => {
 });
 
 module.exports = {
+    publicPath: productionMode ? '/' : '/path',
     productionSourceMap: false, // 배포용 빌드시 소스맵 생성 여부
     filenameHashing: false, // output hash 여부
     pages,
