@@ -36,10 +36,10 @@
 </template>
 
 <script>
-import eventBus from '@/EventBus'
+import eventBus from '@/EventBus';
 
 export default {
-    name: 'app',
+    name: 'Header',
     data(){
         return{
             pageUI: {

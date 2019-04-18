@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import pathData from '@/path.json'
+import pathData from '@/path.json';
 export default {
   name: 'path',
   data(){

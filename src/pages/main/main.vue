@@ -1,14 +1,15 @@
 <template>
   <div id="wrap">
       <LotteHeader></LotteHeader>
-      {{contData}}
+      <Contents :main-prop="contData"></Contents>
   </div>
 </template>
 
 <script>
-import eventBus from '@/EventBus'
-import '@/css/common.css'
-import LotteHeader from '@/components/LotteHeader.vue';
+import eventBus from '@/EventBus';
+import '@/css/common.css';
+const LotteHeader = () => import('@/components/common/LotteHeader.vue');
+import Contents from '@/components/main/contents.vue';
 
 export default {
     name: 'LotteMain',
@@ -18,7 +19,8 @@ export default {
         }
     },
     components: {
-        LotteHeader
+        LotteHeader,
+        Contents
     },
 
     created(){

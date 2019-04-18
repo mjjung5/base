@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import '@/css/common.css'
-import LotteHeader from '@/components/LotteHeader.vue';
+import '@/css/common.css';
+import LotteHeader from '@/components/common/LotteHeader.vue';
 
 export default {
   name: 'app',
